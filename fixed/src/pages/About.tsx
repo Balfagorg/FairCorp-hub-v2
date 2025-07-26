@@ -100,7 +100,7 @@ const About: React.FC = () => (
     {/* What We Do */}
     <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-xl p-6 sm:p-8 border border-blue-900/50 mb-8 sm:mb-12">
       <h2 className="text-xl sm:text-2xl font-bold text-blue-300 mb-6 sm:mb-8 text-center">What We Do</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <div className="text-center">
           <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
             <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,12 +115,34 @@ const About: React.FC = () => (
         <div className="text-center">
           <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
             <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h3 className="text-base sm:text-lg font-semibold text-blue-300 mb-2">Business Growth</h3>
+          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Strategic consulting and scalable solutions to help businesses expand, optimize operations, and achieve sustainable growth.
+          </p>
+        </div>
+        <div className="text-center">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 className="text-base sm:text-lg font-semibold text-blue-300 mb-2">Game Development</h3>
+          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Creating immersive gaming experiences with cutting-edge technology, engaging storytelling, and innovative gameplay mechanics.
+          </p>
+        </div>
+        <div className="text-center">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <h3 className="text-base sm:text-lg font-semibold text-blue-300 mb-2">Innovation Hub</h3>
+          <h3 className="text-base sm:text-lg font-semibold text-blue-300 mb-2">Innovation & Education</h3>
           <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-            Research and development of cutting-edge technologies and creative solutions for tomorrow's challenges.
+            Research and development of cutting-edge technologies combined with educational programs to empower the next generation.
           </p>
         </div>
         <div className="text-center">
@@ -129,9 +151,20 @@ const About: React.FC = () => (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <h3 className="text-base sm:text-lg font-semibold text-blue-300 mb-2">Knowledge Sharing</h3>
+          <h3 className="text-base sm:text-lg font-semibold text-blue-300 mb-2">Easily Available Technology</h3>
           <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-            Educational resources, training programs, and thought leadership content to empower our community.
+            Making advanced technology accessible and affordable to everyone through user-friendly solutions and cost-effective implementations.
+          </p>
+        </div>
+        <div className="text-center">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 className="text-base sm:text-lg font-semibold text-blue-300 mb-2">Extending Opportunities to All</h3>
+          <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+            Creating inclusive pathways for individuals from all backgrounds to access technology, education, and career opportunities.
           </p>
         </div>
       </div>

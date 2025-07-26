@@ -23,7 +23,7 @@ const Services: React.FC = () => (
       </p>
     </div>
     
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
       {[
         {
           title: 'FairCorp CodeGenie (Beta)',
@@ -49,18 +49,10 @@ const Services: React.FC = () => (
           icon: '📊',
           status: 'development'
         },
-        {
-          title: 'More to Come',
-          desc: 'We\'re constantly developing new innovative solutions. Stay tuned for our latest offerings.',
-          link: '',
-          cta: '',
-          icon: '✨',
-          status: 'future'
-        },
       ].map((card, i) => (
         <motion.div
           key={card.title}
-          className="bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-xl p-6 sm:p-8 flex flex-col justify-between border border-blue-900/50 hover:border-blue-700/70 hover:scale-105 hover:shadow-blue-700/40 transition-all duration-300 animate-scale-in min-h-[240px] sm:min-h-[280px]"
+          className="bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-xl p-6 sm:p-8 flex flex-col justify-between border border-blue-900/50 hover:border-blue-700/70 hover:scale-105 hover:shadow-blue-700/40 transition-all duration-300 animate-scale-in min-h-[280px] sm:min-h-[320px]"
           custom={i}
           initial="hidden"
           animate="visible"
@@ -88,13 +80,6 @@ const Services: React.FC = () => (
                 <span className="text-yellow-400 text-sm sm:text-base font-medium">In Development</span>
               </div>
             )}
-            
-            {card.status === 'future' && (
-              <div className="flex items-center mb-4 sm:mb-6">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                <span className="text-purple-400 text-sm sm:text-base font-medium">Future Project</span>
-              </div>
-            )}
           </div>
           
           <div className="mt-auto">
@@ -105,23 +90,43 @@ const Services: React.FC = () => (
               >
                 {card.cta}
               </Link>
-            ) : card.status === 'development' ? (
+            ) : (
               <button
                 disabled
                 className="inline-block w-full text-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-gray-600 to-gray-500 text-gray-300 font-medium rounded-lg cursor-not-allowed opacity-75 text-sm sm:text-base"
               >
                 {card.cta}
               </button>
-            ) : (
-              <div className="text-center">
-                <span className="text-purple-400 text-3xl sm:text-4xl">+</span>
-                <p className="text-gray-500 text-sm sm:text-base mt-2">Future Innovation</p>
-              </div>
             )}
           </div>
         </motion.div>
       ))}
     </div>
+
+    {/* More to Come Section */}
+    <motion.div
+      className="bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-xl p-8 sm:p-12 border border-purple-900/50 hover:border-purple-700/70 hover:scale-105 hover:shadow-purple-700/40 transition-all duration-300 animate-scale-in"
+      initial="hidden"
+      animate="visible"
+      variants={cardVariants}
+      custom={3}
+      whileHover={{ scale: 1.01, boxShadow: '0 0 0 2px #a855f7, 0 8px 32px #9333eaaa' }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className="text-center">
+        <div className="flex items-center justify-center mb-6">
+          <span className="text-4xl sm:text-5xl mr-4">✨</span>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-purple-400">More to Come</h3>
+        </div>
+        <p className="text-gray-300 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-6">
+          We're constantly developing new innovative solutions. Stay tuned for our latest offerings and cutting-edge technologies that will revolutionize how businesses operate.
+        </p>
+        <div className="flex items-center justify-center">
+          <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+          <span className="text-purple-400 text-lg font-medium">Future Projects</span>
+        </div>
+      </div>
+    </motion.div>
     
     <div className="mt-12 sm:mt-16 text-center">
       <p className="text-gray-400 text-sm sm:text-base px-2">

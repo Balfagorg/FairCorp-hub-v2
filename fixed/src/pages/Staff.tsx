@@ -18,7 +18,7 @@ const staffMembers: StaffMember[] = [
     id: 'andrew-fairbank',
     name: 'Andrew Fairbank',
     role: 'CO-Founder',
-    bio: 'Andrew is a passionate entrepreneur and technology enthusiast with a vision for innovative solutions.',
+    bio: '.',
   },
   {
     id: 'brennan-faires',
