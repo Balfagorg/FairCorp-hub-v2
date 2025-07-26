@@ -19,7 +19,7 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800">
       <Navbar />
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-4 py-4 sm:py-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}

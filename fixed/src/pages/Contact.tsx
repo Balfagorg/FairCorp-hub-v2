@@ -1,59 +1,68 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import toast from 'react-hot-toast';
 
 const Contact: React.FC = () => {
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      toast.success('Message sent! We will get back to you soon.');
-    }, 1200);
-  };
-
   return (
-    <section className="max-w-2xl mx-auto py-12 animate-fade-in">
-      <h2 className="text-3xl font-bold text-blue-300 mb-8 animate-slide-up">Contact Us</h2>
-      <motion.form
-        className="bg-gray-900/80 backdrop-blur-xs rounded-2xl shadow-xl p-6 mb-8 border border-blue-900 animate-scale-in"
-        onSubmit={handleSubmit}
+    <section className="max-w-6xl mx-auto py-8 sm:py-12 px-4 animate-fade-in mt-16 sm:mt-20">
+      <div className="text-center mb-8 sm:mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold text-blue-300 mb-4 sm:mb-6 animate-slide-up">
+          Contact Information
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in">
+          We're currently building our infrastructure and establishing official contact channels.
+        </p>
+      </div>
+      
+      <motion.div
+        className="bg-gray-900/90 backdrop-blur-sm rounded-xl shadow-2xl p-6 sm:p-8 border border-blue-900/50 animate-scale-in"
         initial={{ opacity: 0, scale: 0.97 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
       >
-        <div className="mb-4">
-          <label className="block text-gray-300 mb-2" htmlFor="name">Name</label>
-          <input className="w-full px-4 py-2 rounded border border-blue-800 bg-gray-950 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" id="name" type="text" placeholder="Your Name" required disabled={loading} />
+        <div className="text-center space-y-6">
+          <div className="mb-8">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-blue-300 mb-4 sm:mb-6">
+              Infrastructure Development
+            </h2>
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+              We are currently in the process of setting up our official company infrastructure, 
+              including dedicated contact systems, customer support channels, and business operations. 
+              This is an exciting phase of our company's growth as we establish our foundation.
+            </p>
+          </div>
+          
+          <div className="bg-blue-900/20 border border-blue-800/50 rounded-xl p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-semibold text-blue-300 mb-4 sm:mb-6">
+              For Immediate Inquiries
+            </h3>
+            <p className="text-gray-300 text-base sm:text-lg mb-4 sm:mb-6">
+              If you have questions, partnership opportunities, or would like to discuss potential collaborations, 
+              please reach out to our development team directly:
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <div className="flex items-center space-x-3">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span className="text-blue-300 font-medium">Developer Contact:</span>
+              </div>
+              <a 
+                href="mailto:balfagorg@gmail.com"
+                className="text-blue-400 hover:text-blue-300 font-semibold text-lg transition-colors duration-200 break-all"
+              >
+                balfagorg@gmail.com
+              </a>
+            </div>
+          </div>
+          
+          <div className="mt-8 text-gray-400 text-sm sm:text-base">
+            <p>
+              We appreciate your patience as we build our company infrastructure. 
+              Official contact channels and customer support systems will be available soon.
+            </p>
+          </div>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-300 mb-2" htmlFor="email">Email</label>
-          <input className="w-full px-4 py-2 rounded border border-blue-800 bg-gray-950 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" id="email" type="email" placeholder="you@example.com" required disabled={loading} />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-300 mb-2" htmlFor="message">Message</label>
-          <textarea className="w-full px-4 py-2 rounded border border-blue-800 bg-gray-950 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" id="message" rows={4} placeholder="How can we help you?" required disabled={loading} />
-        </div>
-        <button type="submit" className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-6 py-2 rounded font-semibold hover:scale-105 hover:from-blue-500 hover:to-blue-300 transition-all duration-200 animate-pulse-slow flex items-center justify-center min-w-[140px]" disabled={loading}>
-          {loading ? (
-            <motion.span
-              className="inline-block h-5 w-5 border-2 border-blue-200 border-t-blue-500 rounded-full animate-spin mr-2"
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 0.7, ease: 'linear' }}
-            />
-          ) : null}
-          {loading ? 'Sending...' : 'Send Message'}
-        </button>
-      </motion.form>
-      <div className="bg-blue-900/30 border-l-4 border-blue-400 p-4 rounded animate-fade-in">
-        <h3 className="text-lg font-semibold text-blue-300 mb-2">Company Contact Info</h3>
-        <p className="text-gray-300">Email: info@faircorp.com</p>
-        <p className="text-gray-300">Phone: (123) 456-7890</p>
-        <p className="text-gray-300">123 Main St, City, Country</p>
-      </div>
+      </motion.div>
     </section>
   );
 }
